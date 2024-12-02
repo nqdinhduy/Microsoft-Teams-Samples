@@ -1,24 +1,22 @@
-## Summary
+## Tóm tắt
 
-This sample shows how to consume `actemplate.json` for reasonably transforming Legacy Message Cards to Adaptive Cards.
-> ### **Note**
-This tool is not production-ready and does best effort transformation. Use it with caution and thoroughly test card rendering before deploying it in Bots or Workflows. Additionally, be aware that HTTP POST Actions are not supported.
-Please exercise due diligence and consider the limitations mentioned above when using this tool.
+Mẫu này hướng dẫn cách sử dụng `actemplate.json` để chuyển đổi hợp lý các Thẻ Tin nhắn Cũ (Legacy Message Cards) thành Thẻ Thích ứng (Adaptive Cards).  
+> ### **Lưu ý**  
+Công cụ này chưa sẵn sàng cho sản xuất và thực hiện chuyển đổi một cách cố gắng tối đa. Hãy sử dụng nó cẩn thận và kiểm tra kỹ lưỡng việc hiển thị thẻ trước khi triển khai vào Bots hoặc Quy trình công việc (Workflows). Ngoài ra, cần lưu ý rằng các Hành động HTTP POST không được hỗ trợ.  
+Hãy thực hiện các bước thận trọng và xem xét các hạn chế đã được đề cập ở trên khi sử dụng công cụ này.
 
+## Hướng dẫn cài đặt
 
-## Set up instructions
+ - Mẫu này nhắm đến Runtime .NET 8.0.
+ - Vui lòng cài đặt SDK từ liên kết chính thức: https://dotnet.microsoft.com/en-us/download/dotnet/8.0
+ - Mở tệp `msgcard-actest.csproj` bằng Visual Studio hoặc Visual Studio Code.
+ - Chỉnh sửa tệp msgcard.json và cập nhật nó với dữ liệu tải (payload) tuân theo định dạng Thẻ Tin nhắn.
+ - Chạy lệnh `dotnet run` và bạn sẽ thấy Thẻ Thích ứng (AC) đã được chuyển đổi từ `msgcard.json` trong bảng điều khiển.
+ - Sao chép kết quả và xem trước trong trình thiết kế Thẻ Thích ứng tại https://adaptivecards.io/designer/ hoặc sử dụng tiện ích mở rộng Adaptive Card Previewer trong VS Code.
 
- - This sample is targeting the .NET 8.0 Runtime.
- - Please install the SDK from the official link: https://dotnet.microsoft.com/en-us/download/dotnet/8.0
- - Open the `msgcard-actest.csproj` with Visual Studio or Visual Studio Code.
- - Edit the msgcard.json and update it with your payload conforming to Message Card format.
- - Run `dotnet run` and you will see the transformed AC for the `msgcard.json` in the console.
- - Copy the output and preview in AC designer https://adaptivecards.io/designer/ or using Adaptive Card Previewer extension in VS Code.
-
-## Sample Run
+## Mẫu chạy thử
 ![image](assets/run-command.png)
 
 ![image](assets/adaptive-card.png)
-
 
 <img src="https://pnptelemetry.azurewebsites.net/microsoft-teams-samples/tools/message-card-to-ac-transformation" />
